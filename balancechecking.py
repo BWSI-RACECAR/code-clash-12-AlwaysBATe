@@ -30,26 +30,15 @@ class Solution:
     def isBalanced(self, parenthesis): 
             #type parenthesis: string
             #return type: boolean
-            big = 0
-            mid = 0
-            sml = 0
-            if len(parenthesis) % 2 == 0:
+            check = 0
+            i = 0
+            j = len(parenthesis)-1
+            while i < j:
+                if parenthesis[i] == "{" or parenthesis[i] == "[" or parenthesis[i] == "(":
+                    check -= 1
+                else: check += 1
+            if check == 0:
                  return True
-            for i in parenthesis:
-                if i == "{":
-                    big += 1
-                elif i == "}":
-                    big -= 1
-                if i == "[":
-                    mid += 1
-                elif i == "]":
-                    mid -= 1
-                if i == "(":
-                    sml += 1
-                elif i == ")":
-                    sml -= 1
-            if big == 0 and mid == 0 and sml == 0:
-                return True
             return False
             #TODO: Write code below to returnn a boolean value with the solution to the prompt.
             pass
