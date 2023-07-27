@@ -32,10 +32,12 @@ class Solution:
             #return type: boolean
             
             l = 0
-            r = len(parenthesis)
+            r = len(parenthesis)-1
             while r > l:
-                if parenthesis[r] 1= parenthesis[l]:
+                if parenthesis[r] == parenthesis[l]:
                     return False
+                r -= 1
+                l += 1
                 
             return True
             #TODO: Write code below to returnn a boolean value with the solution to the prompt.
