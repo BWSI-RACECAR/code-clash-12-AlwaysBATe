@@ -31,15 +31,9 @@ class Solution:
             #type parenthesis: string
             #return type: boolean
             
-            l = 0
-            r = len(parenthesis)-1
-            while r > l:
-                if parenthesis[r] == parenthesis[l]:
-                    return False
-                r -= 1
-                l += 1
-                
-            return True
+            if len(parenthesis) % 2 == 0:
+                 return True
+            return False
             #TODO: Write code below to returnn a boolean value with the solution to the prompt.
             pass
 
