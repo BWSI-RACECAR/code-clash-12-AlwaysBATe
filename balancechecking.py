@@ -33,7 +33,7 @@ class Solution:
             check = 0
             i = 0
             j = len(parenthesis)-1
-            while i < j:
+            for i in range (0, len(parenthesis)):
                 if parenthesis[i] == "{" or parenthesis[i] == "[" or parenthesis[i] == "(":
                     check -= 1
                 else: check += 1
