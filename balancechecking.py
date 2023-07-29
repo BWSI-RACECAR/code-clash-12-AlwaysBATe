@@ -45,6 +45,7 @@ class Solution:
 
 def main():
     str1=input()
+    print(str1)
     tc1= Solution()
     ans=tc1.isBalanced(str1)
     print(ans)
