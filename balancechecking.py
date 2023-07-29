@@ -36,7 +36,7 @@ class Solution:
             for i in range (0, len(parenthesis)):
                 if parenthesis[i] == "{" or parenthesis[i] == "[" or parenthesis[i] == "(":
                     check -= 1
-                else: check += 1
+                elif parenthesis[i] == "}" or parenthesis[i] == "]" or parenthesis[i] == ")": check += 1
             if check == 0:
                  return True
             return False
